@@ -59,7 +59,7 @@ public class CartController {
     }
 
     @DeleteMapping("/{product_id}")
-    public ResponseEntity<?> decreaseOrRemoveProductFromCart(@PathVariable("product_id") Long productId) {
+    public ResponseEntity<?> removeProductFromCart(@PathVariable("product_id") Long productId) {
         Cart cart = cartRepository.findById(1L).orElseGet(() -> cartRepository.save(new Cart()));
 
         // 장바구니에서 해당 상품 찾기
