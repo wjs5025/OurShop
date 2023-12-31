@@ -1,0 +1,8 @@
+.container {
+    .inner {
+        margin: 0 auto;
+        width: 1240px;
+        padding-top: 60px;
+        min-height: calc(100vh - 60px);
+    }
+}

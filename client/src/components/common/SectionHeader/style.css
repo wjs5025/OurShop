@@ -1,0 +1,15 @@
+.section-header-container {
+    margin-top: 58px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    a {
+        color: var(--gray-60);
+    }
+
+    h2 {
+        font-size: 28px;
+        font-weight: bold;
+    }
+}
