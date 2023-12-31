@@ -1,0 +1,26 @@
+@import "./Reset.css";
+
+/* 웹 폰트 import */
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: "Spoqa Han Sans Neo", "sans-serif";
+}
+
+:root {
+    --primary-color : #f07c00;
+
+    --gray-5: #F3F3F3;
+    --gray-10: #E6E6E6;
+    --gray-20: #CCCCCC;
+    --gray-30: #B3B3B3;
+    --gray-40: #999999;
+    --gray-50: #808080;
+    --gray-60: #666666;
+    --gray-70: #4D4D4D;
+    --gray-80: #333333;
+    --gray-90: #1A1A1A;
+    --gray-100: #030303;
+}
