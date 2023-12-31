@@ -13,6 +13,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 
 @RequiredArgsConstructor
 @RestController
@@ -21,12 +23,9 @@ public class ProductController {
     private final ProductRepository productRepository;
 
     @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<?> getProducts(@PageableDefault Pageable pageable) {
-        Page<Product> products = productRepository.findAll(pageable);
-        PagedModel.PageMetadata pageMetadata = new PagedModel.PageMetadata(pageable.getPageSize(),
-                products.getNumber(), products.getTotalElements());
-        PagedModel<Product> model = PagedModel.of(products.getContent(), pageMetadata);
+    public ResponseEntity<?> getProducts() {
+        List<Product> products = productRepository.findAll();
 
-        return ResponseEntity.ok(model);
+        return ResponseEntity.ok().body(products);
     }
 }
