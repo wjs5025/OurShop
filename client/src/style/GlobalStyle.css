@@ -23,4 +23,6 @@ html, body {
     --gray-80: #333333;
     --gray-90: #1A1A1A;
     --gray-100: #030303;
+
+    --table-background-color : #fafafa
 }
