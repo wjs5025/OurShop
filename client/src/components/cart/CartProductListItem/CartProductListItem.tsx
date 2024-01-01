@@ -14,10 +14,12 @@ function CartProductListItem(props: ICartProductListItemProps) {
 
 	return (
 		<div className="cart-product-list-item-container">
+			{/* 상품 정보 */}
 			<div className="column product-info">
 				<img className="photo" src={cartProduct.product.photoUrl} alt="" />
 				<span>{cartProduct.product.name}</span>
 			</div>
+			{/* 가격 정보 */}
 			<div className="column price">
 				<span className="final-price">
 					<b>{getLocalePrice(finalPrice)}</b>원
@@ -28,9 +30,11 @@ function CartProductListItem(props: ICartProductListItemProps) {
 					</span>
 				)}
 			</div>
+			{/* 수량 정보 */}
 			<div className="column">
 				<CartAmountInput cartProduct={cartProduct} />
 			</div>
+			{/* 총액  */}
 			<div className="column">
 				<b>{getLocalePrice(cartProduct.amount * finalPrice)}</b>원
 			</div>
