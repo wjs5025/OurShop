@@ -2,11 +2,13 @@ import React, { useEffect, useState } from 'react';
 import './style.css';
 import { ICartProduct } from 'types/cart';
 import useCart from 'hooks/useCart';
+import { useNavigate } from 'react-router-dom';
 import CartProductListItem from '../CartProductListItem/CartProductListItem';
 
 function CartProductList() {
 	const { data, productCnt } = useCart();
 	const [cart, setCart] = useState([]);
+	const navigate = useNavigate();
 
 	useEffect(() => {
 		if (data && data.status === 200) {
@@ -30,7 +32,13 @@ function CartProductList() {
 					<div className="product-cnt">총 {productCnt}개의 상품</div>
 				</>
 			) : (
-				<div>장바구니에 상품이 없습니다</div>
+				<div className="empty">
+					<p>장바구니에 상품이 없습니다</p>
+					<p>원하는 상품을 장바구니에 담아보세요!</p>
+					<button type="button" onClick={() => navigate('/')}>
+						상품 목록으로
+					</button>
+				</div>
 			)}
 		</div>
 	);

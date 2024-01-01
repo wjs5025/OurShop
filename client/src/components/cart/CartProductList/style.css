@@ -28,3 +28,29 @@
     }
 
 }
+
+.empty{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    height: 60vh;
+
+    p:nth-child(2) {
+        color: var(--gray-30);
+    }
+
+    button {
+        cursor: pointer;
+        border: none;
+        border-radius: 4px;
+        padding: 10px 20px;
+        color: white;
+        background: var(--primary-color);
+        transition: all 0.2s;
+    }
+    button:hover {
+        transform: scale(1.05);
+    }
+}
