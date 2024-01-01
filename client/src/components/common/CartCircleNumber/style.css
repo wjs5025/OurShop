@@ -1,0 +1,16 @@
+.circle-number{
+    position: absolute;
+    transform: translate(150%, -50%);
+    top : 50%;
+    left: 50%;
+    font-size: 0.7em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    height: 16px;
+    width: 16px;
+    padding: 3px;
+    background-color: var(--gray-50);
+    color: var(--gray-10);
+}

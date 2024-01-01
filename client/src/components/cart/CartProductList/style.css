@@ -1,20 +1,30 @@
-.cart-product-table{
+.cart-product-list{
     width: 100%;
+    margin-bottom: 80px;
 
-    .table-header {
-        line-height: 60px;
-        height: 60px;
+    .list-header {
         font-weight: bold;
-        background-color: #fafafa;
+        background-color: var(--table-background-color);
+        display: flex;
+        align-items: center;
+        text-align: center;
+        height: 60px;
+        padding: 0 20px;
+        border-bottom: 1px solid #eee;
+
         
-        th:nth-child(1) {
-            width: 55%;
+        div:nth-child(1) {
+            flex-basis: 55%;
         }
-
-        th:nth-child(n+2) {
-            width: 15%;
+        
+        div:nth-child(n+2) {
+            flex-basis: 15%;
         }
+    }
 
+    .product-cnt{
+        padding: 20px;
+        text-align: end;
     }
 
 }

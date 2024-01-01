@@ -1,0 +1,53 @@
+.cart-total-container{
+    position: fixed;
+    width: 100%;
+    background-color: var(--gray-5);
+    bottom: 0;
+    height: 130px;
+
+    .inner{
+        margin: 0 auto;
+        width: 1240px;
+        height: 80px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 36px;
+
+        div{
+            display: flex;
+            align-items: flex-end;
+            gap: 8px;
+        }
+
+        .price{
+            font-size: 22px;
+            font-weight: bold;
+        }
+    }
+
+    .gray{
+        color: var(--gray-50);
+    }
+
+    svg{
+        fill: var(--gray-30);
+        width: 30px;
+        height: 30px;
+    }
+
+    .payment{
+        cursor: pointer;
+        border: none;
+        width: 100%;
+        background-color: var(--primary-color);
+        height: 50px;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        font-size: 16px;
+    }
+}
