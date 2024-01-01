@@ -15,7 +15,7 @@ public class CartProductDto {
     private Product product;
 
     public CartProductDto(CartProduct cartProduct) {
-        this.productId = cartProduct.getProduct().getProduct_id();
+        this.productId = cartProduct.getProduct().getProductId();
         this.amount = cartProduct.getAmount();
         this.product = cartProduct.getProduct();
     }

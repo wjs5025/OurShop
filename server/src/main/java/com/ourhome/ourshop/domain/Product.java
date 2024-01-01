@@ -13,7 +13,7 @@ public class Product {
     @Id
     @Column
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long product_id;
+    private long productId;
 
     @Column
     private String name; // 상품명

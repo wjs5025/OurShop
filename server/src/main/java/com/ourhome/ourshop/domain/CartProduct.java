@@ -18,13 +18,13 @@ public class CartProduct {
     private long id;
 
     @ManyToOne
-    @JoinColumn(name = "product_id")
+    @JoinColumn(name = "productId")
     private Product product;
 
     private int amount;
 
     @ManyToOne
-    @JoinColumn(name = "cart_id")
+    @JoinColumn(name = "cartId")
     private Cart cart;
 
     @Override
@@ -35,11 +35,11 @@ public class CartProduct {
         CartProduct that = (CartProduct) o;
 
         // product_id만 동일하게 비교
-        return Objects.equals(getProduct().getProduct_id(), that.getProduct().getProduct_id());
+        return Objects.equals(getProduct().getProductId(), that.getProduct().getProductId());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getProduct().getProduct_id());
+        return Objects.hash(getProduct().getProductId());
     }
 }

@@ -18,7 +18,7 @@ public class Cart {
     @Id
     @Column
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long cart_id;
+    private long cartId;
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "cart", orphanRemoval = true, fetch = FetchType.EAGER)
     @JsonIgnore  // 양방향 참조에서 무시할 필드

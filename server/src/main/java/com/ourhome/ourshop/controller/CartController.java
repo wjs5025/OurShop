@@ -31,14 +31,14 @@ public class CartController {
 
     @PostMapping
     public ResponseEntity<?> addProductToCart(@RequestBody Map<String, Object> requestBody) {
-        Long productId = Long.valueOf(requestBody.get("product_id").toString());
+        Long productId = Long.valueOf(requestBody.get("productId").toString());
 
         // 장바구니 조회 또는 생성
         Cart cart = cartRepository.findById(1L).orElseGet(() -> cartRepository.save(new Cart()));
 
         // 장바구니에 해당 상품이 있는지 확인하기
         Optional<CartProduct> product = cart.getCartProducts().stream()
-                .filter(cartProduct -> cartProduct.getProduct().getProduct_id() == productId).findFirst();
+                .filter(cartProduct -> cartProduct.getProduct().getProductId() == productId).findFirst();
 
         // 장바구니에 상품이 있으면 개수 + 1;
         if (product.isPresent()) {
@@ -64,7 +64,7 @@ public class CartController {
 
         // 장바구니에서 해당 상품 찾기
         Optional<CartProduct> product = cart.getCartProducts().stream()
-                .filter(cartProduct -> cartProduct.getProduct().getProduct_id() == productId)
+                .filter(cartProduct -> cartProduct.getProduct().getProductId() == productId)
                 .findFirst();
 
         if (product.isPresent()) {
@@ -73,7 +73,7 @@ public class CartController {
             if (newAmount > 0) {
                 product.get().setAmount(newAmount);
             } else {
-                cart.getCartProducts().removeIf(p -> p.getProduct().getProduct_id() == product.get().getProduct().getProduct_id());
+                cart.getCartProducts().removeIf(p -> p.getProduct().getProductId() == product.get().getProduct().getProductId());
             }
 
             // 변경된 장바구니 저장
