@@ -4,7 +4,7 @@
  * @returns
  */
 const getLocalePrice = (price: number) => {
-	return price.toLocaleString('ko-KR');
+	return price ? price.toLocaleString('ko-KR') : 0;
 };
 
 export default getLocalePrice;
