@@ -2,6 +2,7 @@ import React from 'react';
 import './style.css';
 import Logo from 'assets/logo.png';
 import { NavLink } from 'react-router-dom';
+import CartCircleNumber from '../CartCircleNumber/CartCircleNumber';
 
 function NavBar() {
 	return (
@@ -15,7 +16,7 @@ function NavBar() {
 					<li>
 						<NavLink to="/cart">
 							장바구니
-							<span className="circle-number">99</span>
+							<CartCircleNumber />
 						</NavLink>
 					</li>
 				</ul>
