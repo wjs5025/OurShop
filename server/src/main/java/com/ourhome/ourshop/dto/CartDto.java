@@ -16,7 +16,7 @@ public class CartDto {
     private List<CartProductDto> cartProducts;
 
     public CartDto(Cart cart) {
-        this.cartId = cart.getCart_id();
+        this.cartId = cart.getCartId();
         this.cartProducts = cart.getCartProducts().stream()
                 .map(CartProductDto::new)
                 .collect(Collectors.toList());
